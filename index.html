@@ -14,6 +14,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -25,7 +26,8 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Montserrat&family=Nunito+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
+    
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,6 +41,8 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Montserrat:wght@400;500&family=Nunito+Sans:wght@300&family=Open+Sans:wght@800&display=swap"
       rel="stylesheet"
     />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -265,15 +269,69 @@
             </div>
         </div>
     </section>
-    <!--Contact Form-->
-     <div class="row" id="contact">
-          <div class="col-lg-11 text-center mx-auto col-12">
-            <div class="col-lg-8 mx-auto">
-              <h2>Contact Me</h2>
+     <!--Contact Form-->
+    <div id="contact" class="contact-area section-padding">
+      <div class="container fill">
+        <div class="section-title text-center">
+          <h2 class="text-center dark">Contact Me</h2>
+          <p>Fill in the boxes below to send me a message! You can also use any of the methods on the right to reach out to me as well.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="contact">
+              <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            
-            
           </div>
+          <!--- END COL -->
+          <div class="col-lg-5">
+            <div class="single_address">
+              <i class="fa fa-map-marker"></i>
+              <h4 class="wanda">Location</h4>
+              <p>Monmouth County, Marlboro</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-envelope"></i>
+              <h4 class="wanda">Send your message</h4>
+              <p>hayley521@icloud.com</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-phone"></i>
+              <h4 class="wanda">Call</h4>
+              <p>(+1) 732 677 9312</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-clock-o"></i>
+              <h4 class="wanda">Work Time</h4>
+              <p>Mon - Fri: 8.00 am - 3.00 pm.
+            </div>
+          </div>
+          <!--- END COL -->
+        </div>
+        <!--- END ROW -->
       </div>
+      <!--- END CONTAINER -->
+    </div>
+
+
   </body>
+
 </html>
